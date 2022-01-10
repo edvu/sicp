@@ -1,0 +1,47 @@
+Mathematical proof
+
+Fib(n)=(φ^n - ψ^n)/√5
+
+Fib(0) = 0
+Fib(1) = 1
+Fib(n) = Fib(n-1) + Fib(n-2)
+
+φ2=φ+1
+
+phi
+φ=(1+√5)/2≈1.6180
+
+psi
+ψ=(1−√5)/2
+
+
+Part two
+
+BASE CASE
+Fib(0) = 0 and therefore statement (φ^0 - ψ^0)/√5 should be equal to 0
+
+(φ^n - ψ^n)/√5 = (((1+√5)/2)^0 - ((1-√5)/2)^0) / √5 = (1-1)/√5 = 0
+
+INDUCTION CASE
+Fib(1) = 1 and therefore statement (φ^1 - ψ^1)/√5 should be equal to 1
+
+(φ^n - ψ^n)/√5 = (((1+√5)/2)^1 - ((1-√5)/2)^1) / √5 = (1,618033989^1 - (−0,618033989)^1) / √5 =
+(0,618033989+1,618033989) / √5 = 1
+
+Using base and induction cases we can conclude that Fib(n)=(φ^n - ψ^n)/√5 is correct
+
+
+Part one
+
+Fib(n) closest to φ^n/√5, where φ=(1+√5)/2≈1.6180
+
+0 <= abs value <= 0.5
+
+Fib(n) = (φ^n / √5) - (ψ^n / √5)
+Fib(n) - (φ^n / √5) = |- (ψ^n / √5)|
+
+Here difference between Fib(n) and φ^n/√5 shouldn't be more than absolute value of 0.5 or -0.5.
+
+0 < (ψ^n / √5) < 1/2
+
+
