@@ -1,4 +1,5 @@
-#lang sicp
+#lang racket/base
+(require racket/trace)
 
 ;;; linear iteration
 (define (expt b n)
@@ -29,8 +30,11 @@
 
 (define (square-iter b n a)
   (cond ((= n 0) a)
-        ((even? n) (square-iter (square b) (/ n 2) (/ (* b a) n)))
-        (else (square-iter b (- n 1) (/ (* b a) n)))))
+        ((even? n) (square-iter (square b) (/ n 2) a))
+        (else (square-iter b (- n 1) (* b a) ))))
 
-(fast-expt 8 3)
-(successive-iterative-squaring 8 3)
+(trace square-iter)
+(square-iter 2 8 1)
+
+(trace fast-expt)
+(fast-expt 2 8)
