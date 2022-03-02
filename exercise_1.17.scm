@@ -37,7 +37,7 @@
 
 (define (mult-log-iter a b acc)
   (cond ((= b 0) acc)
-        ((even? b) (mult-log-iter a (- a 2) (+ acc (double a))))
+        ((even? b) (mult-log-iter a (halve b) (+ acc (double a))))
         (else (mult-log-iter a (- a 1) (+ acc a)))))
 
 (*log 120 347)
