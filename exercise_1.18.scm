@@ -13,8 +13,11 @@
   (russian-peasant-iter a b 0))
 
 (define (russian-peasant-iter a b acc)
-  (or (= b 1) (= b -1) (+ acc (double acc))
+  (cond ((= b 1) (+ acc a))
+        ((= b -1) (+ acc a))
         ((even? b) (russian-peasant-iter (double a) (halve b) acc))
-        (else (russian-peasant-iter a (- a 1) (+ acc a)))))))
+        (else (russian-peasant-iter (double a) (halve (- b 1)) (+ acc a)))))
 
-(*log 120 347)
+(*russian-peasant 120 347)
+
+(* 120 347)
